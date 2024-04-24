@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Private files ###
+/src/main/java/com/ds/edustack/notification/config/MailConfig.java
+/src/main/resources/application.yml
