@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/api/v1/emails")
+@RestController
+@RequestMapping("/api/v1/emails")
 public class EmailSendingController {
 
     @Autowired

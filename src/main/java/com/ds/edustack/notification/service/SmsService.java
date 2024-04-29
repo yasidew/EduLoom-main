@@ -1,6 +1,6 @@
 package com.ds.edustack.notification.service;
 
-import com.ds.edustack.notification.OtpStatus;
+import com.ds.edustack.notification.enums.OtpStatus;
 import com.ds.edustack.notification.config.TwilioConfig;
 import com.ds.edustack.notification.dto.OtpRequest;
 import com.ds.edustack.notification.dto.OtpResponseDto;
@@ -24,6 +24,7 @@ public class SmsService {
 
     @Autowired
     private TwilioConfig twilioConfig;
+
     Map<String, String> otpMap = new HashMap<>();
 
     public OtpResponseDto sendSMS(OtpRequest otpRequest) {

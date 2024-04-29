@@ -1,6 +1,6 @@
 package com.ds.edustack.notification.service.impl;
 
-import com.ds.edustack.notification.EmailStatus;
+import com.ds.edustack.notification.enums.EmailStatus;
 import com.ds.edustack.notification.entity.EmailDetails;
 import com.ds.edustack.notification.repository.EmailRepository;
 import com.ds.edustack.notification.service.EmailService;
@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class EmailServiceImpl implements EmailService {
@@ -38,7 +36,7 @@ public class EmailServiceImpl implements EmailService {
             emailDetails.setToEmail(toEmail);
             emailDetails.setSubject(subject);
             emailDetails.setBody(body);
-            emailDetails.setStatus(EmailStatus.DELIVERED.toString());
+            emailDetails.setStatus(EmailStatus.valueOf(EmailStatus.DELIVERED.toString()));
             emailRepository.save(emailDetails);
 
             System.out.println("Mail Sent Successfully...");
@@ -50,7 +48,7 @@ public class EmailServiceImpl implements EmailService {
             emailDetails.setToEmail(toEmail);
             emailDetails.setSubject(subject);
             emailDetails.setBody(body);
-            emailDetails.setStatus(EmailStatus.FAILED.toString());
+            emailDetails.setStatus(EmailStatus.valueOf(EmailStatus.FAILED.toString()));
             emailDetails.setFailureReason(e.getMessage());
             emailRepository.save(emailDetails);
         }
