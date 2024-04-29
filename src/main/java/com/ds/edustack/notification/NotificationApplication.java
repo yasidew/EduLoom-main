@@ -1,7 +1,7 @@
 package com.ds.edustack.notification;
 
 import com.ds.edustack.notification.config.TwilioConfig;
-import com.ds.edustack.notification.service.EmailSenderService;
+import com.ds.edustack.notification.service.EmailService;
 import com.twilio.Twilio;
 import jakarta.annotation.PostConstruct;
 import jakarta.mail.MessagingException;
@@ -17,7 +17,7 @@ import org.springframework.context.event.EventListener;
 public class NotificationApplication {
 
 	@Autowired
-	private EmailSenderService senderService;
+	private EmailService senderService;
 
 	@Autowired
 	private TwilioConfig twilioConfig;
