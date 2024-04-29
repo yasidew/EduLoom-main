@@ -98,10 +98,12 @@ public class LearnerController {
 
             int completedCourses = learnerService.getCompletedCourseCount(learnerId);
             int inProgressCourses = learnerService.getInProgressCourseCount(learnerId);
+            int enrolledCourses = learnerService.getEnrolledCourseCount(learnerId);
 
             Map<String, Object> progressMap = new HashMap<>();
             progressMap.put("completedCourses", completedCourses);
             progressMap.put("inProgressCourses", inProgressCourses);
+            progressMap.put("enrolledCourses", enrolledCourses);
 
             return ResponseEntity.ok(progressMap);
         } catch (IllegalArgumentException e) {
