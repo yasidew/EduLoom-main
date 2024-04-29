@@ -1,6 +1,6 @@
 package com.learningloom.learnerservice.entity;
 
-
+import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,14 +10,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Course {
-
-    private Long id;
+@Embeddable
+public class CourseInfo {
 
     private String name;
-
-    // create large string variable
-    private String description;
-
-    private Double coursePrice;;
+    private Double price;
+    private String paymentStatus = "Not Paid";
 }

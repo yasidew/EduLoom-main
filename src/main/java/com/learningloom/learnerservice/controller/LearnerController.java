@@ -38,7 +38,6 @@ public class LearnerController {
             return ResponseEntity.ok(learner);
         }catch(Exception e){
             return ResponseEntity.notFound().build();
-
         }
     }
 

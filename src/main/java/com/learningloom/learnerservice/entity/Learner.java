@@ -40,7 +40,7 @@ public class Learner {
 //    private List<Long> enrolledCourseIds;
 
     @ElementCollection
-    private Map<Long, String> enrolledCourses = new HashMap<>();
+    private Map<Long, CourseInfo> enrolledCourses = new HashMap<>();
 
 
     @ElementCollection
@@ -49,37 +49,11 @@ public class Learner {
     @ElementCollection
     private Map<Long, String> inProgressCourses = new HashMap<>();
 
-//    transient private List<Course> completedCourses;
-//
-//    transient private List<Course> inProgressCourses;
 
 
 
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "course",
-//            joinColumns = @JoinColumn(name = "learner_id"),
-//            inverseJoinColumns = @JoinColumn(name = "course_id")
-//    )
-//
-//    private List<Course> enrolledCourses;
-//
-//    @ManyToMany
-//    @JoinTable(
-//            name = "completed_course",
-//            joinColumns = @JoinColumn(name = "learner_id"),
-//            inverseJoinColumns = @JoinColumn(name = "course_id")
-//    )
-//    private List<Course> completedCourses;
-//
-//    @ManyToMany
-//    @JoinTable(
-//            name = "in_progress_course",
-//            joinColumns = @JoinColumn(name = "learner_id"),
-//            inverseJoinColumns = @JoinColumn(name = "course_id")
-//    )
-//    private List<Course> inProgressCourses;
+
 
 
 
