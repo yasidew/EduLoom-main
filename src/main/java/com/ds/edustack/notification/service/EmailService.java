@@ -1,11 +1,11 @@
 package com.ds.edustack.notification.service;
 
-import com.ds.edustack.notification.entity.EmailDetails;
+import com.ds.edustack.notification.entity.Notification;
 
-import java.util.List;
+import java.util.Optional;
 
 public interface EmailService {
-    void sendSimpleEmail(String toEmail, String subject, String body);
+    void sendNotification(String toEmail, String enrolledCourseId, String courseName);
 
-//    List<EmailDetails> findByToEmail(String toEmail);
+    Optional<Notification> findNotificationById(String id);
 }

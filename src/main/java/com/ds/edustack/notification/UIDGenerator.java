@@ -1,10 +1,10 @@
 package com.ds.edustack.notification;
 
 public class UIDGenerator {
-    private static int emailCounter = 0;
+    private static int notificationCounter = 0;
 
     public static String generateEmailUID() {
-        return generateUID("EID", ++emailCounter);
+        return generateUID("NID", ++notificationCounter);
     }
 
     private static String generateUID(String prefix, int counter) {

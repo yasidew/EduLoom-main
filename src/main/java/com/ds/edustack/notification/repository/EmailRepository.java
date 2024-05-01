@@ -1,13 +1,13 @@
 package com.ds.edustack.notification.repository;
 
-import com.ds.edustack.notification.entity.EmailDetails;
+import com.ds.edustack.notification.entity.Notification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface EmailRepository extends JpaRepository<EmailDetails, String> {
+public interface EmailRepository extends JpaRepository<Notification, String> {
 
-    List<EmailDetails> findByToEmail(String toEmail);
+    List<Notification> findByToEmail(String toEmail);
 }

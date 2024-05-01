@@ -1,6 +1,6 @@
 package com.ds.edustack.notification.enums;
 
-public enum EmailStatus {
+public enum NotificationStatus {
     DELIVERED,
     FAILED
 }
