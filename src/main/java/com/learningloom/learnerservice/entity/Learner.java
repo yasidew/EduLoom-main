@@ -24,11 +24,14 @@ public class Learner {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
-    private String firstName;
+//    @Column(nullable = false)
+//    private String firstName;
+//
+//    @Column(nullable = false)
+//    private String lastName;
 
     @Column(nullable = false)
-    private String lastName;
+    private String name;
 
     @Column(unique = true, nullable = false)
     private String email;
@@ -48,12 +51,6 @@ public class Learner {
 
     @ElementCollection
     private Map<Long, String> inProgressCourses = new HashMap<>();
-
-
-
-
-
-
 
 
 

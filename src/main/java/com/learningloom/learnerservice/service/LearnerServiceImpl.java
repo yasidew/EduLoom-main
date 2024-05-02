@@ -41,8 +41,9 @@ public class LearnerServiceImpl implements LearnerService{
         try{
 
             Learner learner = new Learner();
-            learner.setFirstName(learnerDto.getFirstName());
-            learner.setLastName(learnerDto.getLastName());
+            learner.setName(learnerDto.getName());
+//            learner.setFirstName(learnerDto.getFirstName());
+//            learner.setLastName(learnerDto.getLastName());
             learner.setEmail(learnerDto.getEmail());
             learner.setPassword(learnerDto.getPassword());
             learner.setEnrolledCourses(new HashMap<>());
