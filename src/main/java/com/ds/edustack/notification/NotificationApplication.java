@@ -1,23 +1,22 @@
 package com.ds.edustack.notification;
 
 import com.ds.edustack.notification.config.TwilioConfig;
-import com.ds.edustack.notification.service.EmailService;
+import com.ds.edustack.notification.service.NotificationService;
 import com.twilio.Twilio;
 import jakarta.annotation.PostConstruct;
-import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.event.EventListener;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableConfigurationProperties
+@EnableFeignClients
 public class NotificationApplication {
 
 	@Autowired
-	private EmailService senderService;
+	private NotificationService senderService;
 
 	@Autowired
 	private TwilioConfig twilioConfig;

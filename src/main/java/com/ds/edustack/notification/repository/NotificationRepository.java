@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EmailRepository extends JpaRepository<Notification, String> {
+public interface NotificationRepository extends JpaRepository<Notification, String> {
 
     List<Notification> findByToEmail(String toEmail);
 }
